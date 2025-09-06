@@ -1,0 +1,30 @@
+  import { Button, Container } from "@radix-ui/themes";
+  import { useState } from "react";
+  import ClipLoader from "react-spinners/ClipLoader";
+
+  export function CreateCounter({
+    onCreated,
+  }: {
+    // hMM regarding this prop that is parsed in.
+    onCreated: (id: string) => void;
+  }) {
+    const [waitingForTxn, setWaitingForTxn] = useState(false);
+
+    function create() {
+      // TODO
+    }
+
+    return (
+      <Container>
+        <Button
+          size="3"
+          onClick={() => {
+            create();
+          }}
+          disabled={waitingForTxn}
+        >
+          {waitingForTxn ? <ClipLoader size={20} /> : "Create Counter"}
+        </Button>
+      </Container>
+    );
+  }
