@@ -1,0 +1,15 @@
+# Node
+**/node_modules/
+**/dist/
+**/build/
+*.log
+
+# Move
+move/**/build/
+move/**/Move.lock
+
+# Editor/system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
